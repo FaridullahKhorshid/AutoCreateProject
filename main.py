@@ -26,8 +26,8 @@ class MyGithub:
             print('')
             print(f'Wrong password or username! Please tray again! ')
 
-    def create_project(self):
-        project_name = input('Your project name? ')
+    def create_project(self, project_name):
+
         path = 'C:\\Projects'
 
         if not os.path.isdir(path):
@@ -91,7 +91,9 @@ else:
     iChoice = int(get_choice())
 
     if iChoice == 1:
-        oGithub.create_project()
+        project_name_from_input = input('Your project name? ')
+        oGithub.create_project(project_name_from_input)
+
     elif iChoice == 2:
         oGithub.get_repo_list()
     elif iChoice == 3:
