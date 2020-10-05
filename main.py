@@ -8,7 +8,7 @@ from getpass import getpass
 # with this code you can create an project with a local dir and a github repo, and yor repo list
 # module PyGithub is required, if don't install PyGithub you cant use github
 
-iNumberOfHeart = 30
+NUMBER_OF_HEART = 30
 
 
 class MyGithub:
@@ -66,9 +66,9 @@ class MyGithub:
 # get standard choices for the user
 def get_choice():
     print('')
-    print(iNumberOfHeart * '❤')
+    print(NUMBER_OF_HEART * '❤')
     print(f'Welcome {oGithub.my_github.get_user().name} what can i do for you? ')
-    print(iNumberOfHeart * '❤')
+    print(NUMBER_OF_HEART * '❤')
     print('')
 
     choices = [
@@ -97,14 +97,14 @@ else:
     elif iChoice == 2:
         oGithub.get_repo_list()
     elif iChoice == 3:
-        print(iNumberOfHeart * '❤')
+        print(NUMBER_OF_HEART * '❤')
         print('You can now log in with another account! ')
-        print(iNumberOfHeart * '❤')
+        print(NUMBER_OF_HEART * '❤')
         oGithub = MyGithub()
     elif iChoice == 4:
-        print(iNumberOfHeart * '❤')
+        print(NUMBER_OF_HEART * '❤')
         print('You are now logged out, please login again! ')
-        print(iNumberOfHeart * '❤')
+        print(NUMBER_OF_HEART * '❤')
         oGithub = MyGithub()
     else:
         print('')
